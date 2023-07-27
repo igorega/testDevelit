@@ -1,0 +1,53 @@
+.currency-converter
+	.container
+
+		.currency-converter__box.mb-5
+			.bg-light.p-4.p-md-5.border.border-2.rounded.mt-5
+				h1.text-center.mb-4 Currency converter
+
+				form.inputs
+					.input-group.mb-3
+						label.input-group-text Amount
+
+						input#amount.form-control(
+							type='text'
+							aria-label='Amount'
+							value='100'
+							placeholder='100'
+						)
+
+					.input-group.mb-3
+						label.input-group-text(for='fromCurrency') From currency
+
+						select#fromCurrency.form-select
+
+					.input-group.mb-3
+						label.input-group-text(for='toCurrency') To currency
+
+						select#toCurrency.form-select
+
+					.input-group
+						button#buttonConvert.btn.btn-success(
+							type='button'
+						) Convert
+
+						input#output.form-control(
+							type='text'
+							placeholder=''
+							aria-label='Convert'
+							aria-describedby='buttonConvert'
+							readonly=''
+						)
+
+		.currency-converter__history.historyBlock
+			h2.text-center.mb-4 History
+
+			table.table.text-center
+				thead
+					tr
+						th(scope='col') Amount
+						th(scope='col') From currency
+						th(scope='col') To currency
+						th(scope='col') Actions
+
+				tbody.historyTable
